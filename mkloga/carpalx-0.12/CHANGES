@@ -1,0 +1,25 @@
+
+CARPALX v0.1
+Keyboard Layout Optimizer
+http://mkweb.bcgsc.ca/carpalx
+Martin Krzywinski <martink@bcgsc.ca>
+
+v0.1 - 15 Jan 2008 
+
+Repackaged and versioned.
+
+v0.11 - 14 Aug 2009
+
+Adjusted typing model to include weights for base, effort and stroke components.
+
+Improved clarity of effort reports.
+
+Improved consistency in configuration file.
+
+Added fonts/
+
+v0.12 - 2 Oct 2015
+
+
+
+

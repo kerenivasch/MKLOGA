@@ -1,0 +1,33 @@
+################################################################
+#
+# KEYBOARD LAYOUT
+#
+# Each key is defined as xy where x is
+# the lower case and y is the upper case
+# character for that key. Letters are assumed
+# to have their upper case character on the
+# same key so a is the same as aA.
+#
+# Meta-keys like tab/shift/ctrl/space are not
+# specified - their location is not
+# subject to optimization
+#
+# Finger assignment for each key is based on 0..9 finger
+# index
+#
+#  01234  56789         :  = pinky 
+#  :|||/  \|||:         |  = middle fingers
+#  left   right        / \ = thumbs
+#  hand   hand
+#
+# Finger assignment follows the touch-typing convention. Thumbs
+# are restricted to the space bar which is not subject to layout
+# optimization and therefore thumb indexes (4,5) do not appear
+# in the blocks' fingers parameter
+# 
+# Row 1 finger assignment for keys such as 1, 9 and - tends
+# to vary between individuals.
+#
+# NOTE: rows are 1-indexed
+#
+################################################################

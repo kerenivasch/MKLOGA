@@ -1,0 +1,42 @@
+carpalx-corpus-0.10
+
+Training files for carpalx
+mkweb.bcgsc.ca/carpalx
+
+
+################################################################
+
+books/
+
+Variety of books from Project Guttenberg (www.guttenberg.org). These
+are used as the English corpus for keyboard optimization. Since the
+files contain formatting characters and other markups, the books are
+first passed through a few filters (sanitizebooks)
+
+  books.txt - all books, sanitized
+  books.short.txt - 50,000 lines of books.txt
+
+words.txt
+
+About 45k English words.
+
+words.480k.txt
+
+About 480k English words.
+
+ruby.txt
+
+Some Ruby code, extracted from distribution libraries.
+
+perl.txt
+
+Some Perl code, extracted from a variety of modules.
+
+java.txt
+
+Some Java code, extracted from a variety of local repositores at my
+work.
+
+triads.txt
+
+All letter triads formed using a-z (aaa to zzz)

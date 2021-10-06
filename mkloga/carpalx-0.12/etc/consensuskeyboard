@@ -1,0 +1,9 @@
+<<include png/colors.conf>>
+
+imageborder = grey
+keyshadow   = grey
+background  = white
+effort_color_i = lred
+effort_color_f = lgreen
+key         = white
+keyborder   = black

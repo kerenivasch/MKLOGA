@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for k in *conf ; do
+
+echo "bin/carpalx -conf etc/test-01.conf -keyboard_input keyboards/$k > etc/stats/effort/english/mod_01/$k"
+echo "bin/carpalx -conf etc/test-02.conf -keyboard_input keyboards/$k > etc/stats/effort/english/mod_02/$k"
+echo "bin/carpalx -conf etc/test-03.conf -keyboard_input keyboards/$k > etc/stats/effort/english/mod_03/$k"
+
+done

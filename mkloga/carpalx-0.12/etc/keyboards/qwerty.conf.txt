@@ -1,0 +1,26 @@
+
+<keyboard>
+
+<row 1>
+keys    = `~ 1! 2@ 3\# 4$ 5% 6^ 7& 8* 9( 0) -_ =+
+fingers =  0  1  1   2  3  3  3  6 7   7  8  9  9
+</row>
+
+<row 2>
+keys    = q w e r t y u i o p [{ ]} \|
+fingers = 0 1 2 3 3 6 6 7 8 9  9  9  9
+</row>
+
+<row 3>
+keys    = a s d f g h j k l ;: '"
+fingers = 0 1 2 3 3 6 6 7 8  9  9
+</row>
+
+<row 4>
+keys    = z x c v b n m ,< .> /?
+fingers = 0 1 2 3 3 6 6  7  8  9
+</row>
+
+</keyboard>
+
+

@@ -1,0 +1,12 @@
+################################################################
+#
+# KEYBOARD MASK 
+#
+# All non-zero keys are subject to relocation to
+# minimize typing effort
+#
+# Put 0 if you want to keep keys to stay in their
+# location and 1 if you would like to try to optimize the
+# position of the key.
+#
+################################################################

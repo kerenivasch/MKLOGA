@@ -1,0 +1,304 @@
+#!/home/martink/bin/perl
+
+=pod
+
+=head1 NAME
+
+consensuskeyboard - draw an image of multiple layouts
+
+=head1 SYNOPSIS
+
+  consensuskeyboard -dir DIR -effort MAX_EFFORT
+
+=head1 DESCRIPTION
+
+=head1 HISTORY
+
+=over
+
+=item * 
+
+=back 
+
+=head1 BUGS
+
+=head1 AUTHOR
+
+Martin Krzywinski
+
+=head1 CONTACT
+
+  Martin Krzywinski
+  Genome Sciences Centre
+  Vancouver BC Canada
+  www.bcgsc.ca
+  martink@bcgsc.ca
+
+=cut
+
+################################################################
+#
+# Copyright 2002-2008 Martin Krzywinski
+#
+# This file is part of the Genome Sciences Centre Perl code base.
+#
+# This script is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This script is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this script; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+################################################################
+
+################################################################
+#                           Martin Krzywinski (martink@bcgsc.ca)
+#                                                           2008
+################################################################
+
+use strict;
+use Config::General;
+use Data::Dumper;
+use File::Basename;
+use FindBin;
+use Getopt::Long;
+use IO::File;
+use List::Util;
+use List::MoreUtils;
+use Math::VecStat qw(sum min max average);
+use Pod::Usage;
+use Set::IntSpan;
+use Statistics::Descriptive;
+use Storable;
+use Time::HiRes qw(gettimeofday tv_interval);
+use lib "$FindBin::RealBin";
+use lib "$FindBin::RealBin/../lib";
+use lib "$FindBin::RealBin/lib";
+use vars qw(%OPT %CONF);
+
+use GD;
+
+################################################################
+#
+# *** YOUR MODULE IMPORTS HERE
+#
+################################################################
+
+GetOptions(\%OPT,
+	   "dir=s",
+	   "effort=f",
+	   "configfile=s","help","man","debug+");
+
+pod2usage() if $OPT{help};
+pod2usage(-verbose=>2) if $OPT{man};
+loadconfiguration($OPT{configfile});
+populateconfiguration(); # copy command line options to config hash
+validateconfiguration(); 
+if($CONF{debug} > 1) {
+  $Data::Dumper::Pad = "debug parameters";
+  $Data::Dumper::Indent = 1;
+  $Data::Dumper::Quotekeys = 0;
+  $Data::Dumper::Terse = 1;
+  print Dumper(\%CONF);
+}
+
+opendir(D,$CONF{dir});
+my $consensus;
+my $n;
+while(my $item = readdir(D)) {
+  next unless $item =~ /\.conf$/;
+  my $file = "$CONF{dir}/$item";
+  my %conf = Config::General->new($file)->getall;
+  next unless $conf{current_parameters}{effort} <= $CONF{effort};
+  for my $row (keys %{$conf{keyboard}{row}}) {
+    my @keys = split(" ",$conf{keyboard}{row}{$row}{keys});
+    for my $i (0..@keys) {
+      my $key = substr($keys[$i],0,1);
+      $consensus->{$row}{$i}{$key}++ if $key ne "";
+    }
+  }
+  $n++;
+  #next if $n++ > 1;
+}
+closedir(D);
+
+my $im = GD::Image->new(1000,500);
+my $colors = allocate_colors($im);
+$im->fill(0,0,$colors->{$CONF{background}});
+
+my ($w,$h,$m,$s) = (50,50,5,2);
+for my $row (sort {$a <=> $b} keys %$consensus) {
+  for my $col (sort {$a <=> $b} keys %{$consensus->{$row}}) {
+    my $x = $col * ($w+$m) + $w * $row/3;
+    my $y = $row * ($h+$m);
+    my $total = sum(values %{$consensus->{$row}{$col}});
+    my @keys = sort { $consensus->{$row}{$col}{$b} <=> $consensus->{$row}{$col}{$a} } keys %{$consensus->{$row}{$col}};
+    next unless @keys;
+    printinfo($n,$row,$col,map {sprintf("%s %.4f",$_,$consensus->{$row}{$col}{$_}/$total) } @keys);
+
+    # shadow
+    $im->filledRectangle($x+$s,$y+$s,$x+$w+$s,$y+$w+$s,$colors->{$CONF{keyshadow}});
+    # key
+    $im->filledRectangle($x,$y,$x+$w,$y+$w,$colors->{$CONF{key}});
+    $im->rectangle($x,$y,$x+$w,$y+$w,$colors->{$CONF{keyborder}});
+
+    # top key
+    my $size = 14;
+    my $ky   = $y+2;
+    my $text = uc $keys[0];
+    my ($kw,$kh) = wh($text,$size);
+    $ky += $size;
+    $im->stringFT($colors->{black},
+		  $CONF{font},
+		  $size,
+		  0,
+		  (2*$x+$w)/2-$kw/2,
+		  $ky,
+		  $text) if defined $text;
+    # next 3 keys
+    $size = 10;
+    $ky   = $ky+2;
+    $text = uc join("",@keys[1..3]);
+    ($kw,$kh) = wh($text,$size);
+    $ky += $size;
+    $im->stringFT($colors->{black},
+		  $CONF{font},
+		  $size,
+		  0,
+		  (2*$x+$w)/2-$kw/2,
+		  $ky,
+		  $text) if defined $text;
+    # next 5 keys
+    $size = 8;
+    $ky   = $ky+2;
+    $text = uc join("",@keys[4..9]);
+    ($kw,$kh) = wh($text,$size);
+    $ky += $size;
+    $im->stringFT($colors->{black},
+		  $CONF{font},
+		  $size,
+		  0,
+		  (2*$x+$w)/2-$kw/2,
+		  $ky,
+		  $text) if defined $text;
+    # last 5 keys
+    $size = 8;
+    $ky   = $ky+2;
+    $text = uc join("",@keys[scalar(max(@keys-6,7))..@keys-1]);
+    ($kw,$kh) = wh($text,$size);
+    $ky += $size;
+    $im->stringFT($colors->{red},
+		  $CONF{font},
+		  $size,
+		  0,
+		  (2*$x+$w)/2-$kw/2,
+		  $ky,
+		  $text) if length($text);
+
+  }
+}
+
+open(F,">consensus.png");
+binmode(F);
+print F $im->png;
+close(F);
+
+sub wh {
+  my ($text,$size) = @_;
+  my @bounds = GD::Image->stringFT($colors->{black},
+			     $CONF{font},
+			     $size,
+			     0,
+			     0,0,
+			     $text);
+  return ($bounds[2]-$bounds[0],
+	  $bounds[1]-$bounds[7]);
+}
+
+sub allocate_colors {
+  my $image = shift;
+  my $colors;
+  foreach my $color (keys %{$CONF{colors}}) {
+    my $colorvalue = $CONF{colors}{$color};
+    $colors->{$color} = $image->colorAllocate(split(/[, ]+/,$colorvalue));
+  }
+  return $colors;
+}
+
+sub validateconfiguration {
+
+}
+
+################################################################
+#
+# *** DO NOT EDIT BELOW THIS LINE ***
+#
+################################################################
+
+sub populateconfiguration {
+  foreach my $key (keys %OPT) {
+    $CONF{$key} = $OPT{$key};
+  }
+  repopulateconfiguration(\%CONF);
+}
+
+sub repopulateconfiguration {
+  my $root     = shift;
+  for my $key (keys %$root) {
+    my $value = $root->{$key};
+    if(ref($value) eq "HASH") {
+      repopulateconfiguration($value);
+    } elsif (ref($value) eq "ARRAY") {
+      for my $item (@$value) {
+        repopulateconfiguration($item);
+      }
+    } else {
+      while($value =~ /__([^_].+?)__/g) {
+        my $source = "__" . $1 . "__";
+        my $target = eval $1;
+        $value =~ s/\Q$source\E/$target/g;
+      }
+      $root->{$key} = $value;
+    }
+  }
+}
+
+sub loadconfiguration {
+  my $file = shift;
+  my ($scriptname) = fileparse($0);
+  if(-e $file && -r _) {
+    # great the file exists
+  } elsif (-e "/home/$ENV{LOGNAME}/.$scriptname.conf" && -r _) {
+    $file = "/home/$ENV{LOGNAME}/.$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/etc/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/etc/$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/../etc/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/../etc/$scriptname.conf";
+  } else {
+    return undef;
+  }
+  $OPT{configfile} = $file;
+  my $conf = new Config::General(-ConfigFile=>$file,
+				 -AllowMultiOptions=>"yes",
+				 -LowerCaseNames=>1,
+				 -AutoTrue=>1);
+  %CONF = $conf->getall;
+}
+
+sub printdebug {
+  printinfo("debug",@_)  if $CONF{debug};
+}
+
+sub printinfo {
+  printf("%s\n",join(" ",@_));
+}
+

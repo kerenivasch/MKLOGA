@@ -1,0 +1,247 @@
+#!/home/martink/bin/perl
+
+=pod
+
+=head1 NAME
+
+timetriads - interactive triad typing timer
+
+=head1 SYNOPSIS
+
+  timetriads -f triads.txt -i 10
+
+=head1 DESCRIPTION
+
+Reads triads from a file, prompts the user to type a randomly sampled
+triad and measures the time taken to type the triads. The results may
+help in configuring carpalx for your typing habits.
+
+During each triad timing, the triad is displayed and the user is
+prompted to first hit the space bar and then type the triad. The
+typing timer starts as soon as the user hits the space bar - this
+eliminates impact of reaction time.
+
+Each typed triad and timer value will be written to timetriads.out
+(appended). Triads that are mistyped will have "mistype" reported
+instead of the timer value.
+
+ > cat timetriads.out
+ ...
+ bfu 0.591992
+ dou 0.383609
+ koc mistype
+ pcl 0.593910
+
+=head1 OPTIONS
+
+=head2 -f FILE
+
+Specify the file containing the triads. You can generate this using
+generatetriads. (default ../corpus/triads.txt)
+
+=head2 -i INT
+
+Number of test iterations (default 10).
+
+=head1 AUTHOR
+
+Martin Krzywinski
+
+=head1 CONTACT
+
+  Martin Krzywinski
+  Genome Sciences Centre
+  Vancouver BC Canada
+  www.bcgsc.ca
+  martink@bcgsc.ca
+
+=cut
+
+################################################################
+#
+# Copyright 2002-2008 Martin Krzywinski <martink@bcgsc.ca>
+#
+# This file is part of the Genome Sciences Centre Perl code base.
+#
+# This script is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This script is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this script; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+################################################################
+
+use strict;
+use Config::General;
+use Data::Dumper;
+use File::Basename;
+use FindBin;
+use Getopt::Long;
+use IO::File;
+use Math::VecStat qw(sum min max average);
+use Math::Combinatorics;
+use Pod::Usage;
+use Storable;
+use Time::HiRes qw(gettimeofday tv_interval);
+use Term::GetKey;
+use Term::ReadKey;
+use lib "$FindBin::RealBin";
+use lib "$FindBin::RealBin/../lib";
+use lib "$FindBin::RealBin/lib";
+use vars qw(%OPT %CONF);
+
+################################################################
+#
+# *** YOUR MODULE IMPORTS HERE
+#
+################################################################
+
+GetOptions(\%OPT,
+	   "file=s",
+	   "iter=i",
+	   "configfile=s","help","man","debug+");
+
+pod2usage() if $OPT{help};
+pod2usage(-verbose=>2) if $OPT{man};
+loadconfiguration($OPT{configfile});
+populateconfiguration(); # copy command line options to config hash
+validateconfiguration(); 
+if($CONF{debug} > 1) {
+  $Data::Dumper::Pad = "debug parameters";
+  $Data::Dumper::Indent = 1;
+  $Data::Dumper::Quotekeys = 0;
+  $Data::Dumper::Terse = 1;
+  print Dumper(\%CONF);
+}
+
+my %triads;
+open(F,$CONF{file}) || die "cannot find triad file [$CONF{file}]";
+printinfo("reading triads from",$CONF{file});
+while(<F>) {
+  chomp;
+  my ($triad) = split;
+  $triads{$triad}++;
+}
+close(F);
+printinfo("found",int(keys %triads),"triads");
+
+printinfo();
+printinfo("Triad typing will be timed");
+printinfo("A triad will be displayed and the timer started after you hit the spacebar");
+printinfo("ctrl-c ends the test");
+
+my @triads = keys %triads;
+setkeymode(2);
+for my $iter (1..$CONF{iter}) {
+  my $triad    = $triads[rand() * @triads];
+  my $time     = time_triad($triad);
+  open(F,">>$CONF{outfile}");
+  printf F ("%s %s\n",$triad,$time || "mistype");
+  close(F);
+  if(! defined $time) {
+    print "$triad mistype\n";
+  } else {
+    print "$triad $time\n";
+  }
+}
+setkeymode(0);
+
+sub time_triad {
+  my $triad = shift;
+  print "\n$triad (hit space first) ";
+  my @input;
+  my $t;
+  while(my $key = qtty()) {
+    if($key eq "\cc") {
+      setkeymode(0);
+      printinfo();
+      exit;
+    }
+    last if $key eq " ";
+  }
+  $t = [gettimeofday];
+  for my $i (0..2) {
+    $input[$i] = qtty();
+  }
+  my $elapsed = tv_interval($t);
+  my $typed_triad = join("",@input);
+  $elapsed = undef if $typed_triad ne $triad;
+  return $elapsed;
+}
+
+sub validateconfiguration {
+  $CONF{file} ||= "../corpus/triads.txt";
+  $CONF{iter} ||= 10;
+  $CONF{outfile} ||= "timetriads.out";
+}
+
+################################################################
+#
+# *** DO NOT EDIT BELOW THIS LINE ***
+#
+################################################################
+
+sub populateconfiguration {
+  foreach my $key (keys %OPT) {
+    $CONF{$key} = $OPT{$key};
+  }
+
+  # any configuration fields of the form __XXX__ are parsed and replaced with eval(XXX). The configuration
+  # can therefore depend on itself.
+  #
+  # flag = 10
+  # note = __2*$CONF{flag}__ # would become 2*10 = 20
+
+  for my $key (keys %CONF) {
+    my $value = $CONF{$key};
+    while($value =~ /__([^_].+?)__/g) {
+      my $source = "__" . $1 . "__";
+      my $target = eval $1;
+      $value =~ s/\Q$source\E/$target/g;
+      #printinfo($source,$target,$value);
+    }
+    $CONF{$key} = $value;
+  }
+
+}
+
+sub loadconfiguration {
+  my $file = shift;
+  my ($scriptname) = fileparse($0);
+  if(-e $file && -r _) {
+    # great the file exists
+  } elsif (-e "/home/$ENV{LOGNAME}/.$scriptname.conf" && -r _) {
+    $file = "/home/$ENV{LOGNAME}/.$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/etc/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/etc/$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/../etc/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/../etc/$scriptname.conf";
+  } else {
+    return undef;
+  }
+  $OPT{configfile} = $file;
+  my $conf = new Config::General(-ConfigFile=>$file,
+				 -AllowMultiOptions=>"yes",
+				 -LowerCaseNames=>1,
+				 -AutoTrue=>1);
+  %CONF = $conf->getall;
+}
+
+sub printdebug {
+  printinfo("debug",@_)  if $CONF{debug};
+}
+
+sub printinfo {
+  printf("%s\n",join(" ",@_));
+}
+

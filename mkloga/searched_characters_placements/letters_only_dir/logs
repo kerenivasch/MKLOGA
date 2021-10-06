@@ -1,0 +1,607 @@
+info: Fri Jan 17 22:16:38 2020] Load genetic config file: searched_characters_placements/letters_only_dir/genetic_config.json
+info: Fri Jan 17 22:16:38 2020] Construct keyboard structure
+info: Fri Jan 17 22:16:38 2020] Construct initial characters placement
+info: Fri Jan 17 22:16:38 2020] Start genetic algorithm
+info: Fri Jan 17 22:16:41 2020] Start generation number 1
+info: Fri Jan 17 22:16:41 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:16:41 2020] Best characters placement fitness value: 1484890.7
+info: Fri Jan 17 22:16:41 2020] Start natural selection and crossover
+info: Fri Jan 17 22:16:46 2020] Start mutating characters placements
+info: Fri Jan 17 22:16:46 2020] Start random injection
+info: Fri Jan 17 22:16:46 2020] Start generation number 2
+info: Fri Jan 17 22:16:46 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:16:47 2020] Best characters placement fitness value: 1456392.79
+info: Fri Jan 17 22:16:47 2020] Start natural selection and crossover
+info: Fri Jan 17 22:16:51 2020] Start mutating characters placements
+info: Fri Jan 17 22:16:51 2020] Start random injection
+info: Fri Jan 17 22:16:52 2020] Start generation number 3
+info: Fri Jan 17 22:16:52 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:16:52 2020] Best characters placement fitness value: 1426950.16
+info: Fri Jan 17 22:16:52 2020] Start natural selection and crossover
+info: Fri Jan 17 22:16:57 2020] Start mutating characters placements
+info: Fri Jan 17 22:16:57 2020] Start random injection
+info: Fri Jan 17 22:16:57 2020] Start generation number 4
+info: Fri Jan 17 22:16:57 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:16:58 2020] Best characters placement fitness value: 1418425.44
+info: Fri Jan 17 22:16:58 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:02 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:02 2020] Start random injection
+info: Fri Jan 17 22:17:02 2020] Start generation number 5
+info: Fri Jan 17 22:17:02 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:03 2020] Best characters placement fitness value: 1414726.41
+info: Fri Jan 17 22:17:03 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:08 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:08 2020] Start random injection
+info: Fri Jan 17 22:17:08 2020] Start generation number 6
+info: Fri Jan 17 22:17:08 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:09 2020] Best characters placement fitness value: 1414726.41
+info: Fri Jan 17 22:17:09 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:13 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:13 2020] Start random injection
+info: Fri Jan 17 22:17:13 2020] Start generation number 7
+info: Fri Jan 17 22:17:13 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:14 2020] Best characters placement fitness value: 1408257.32
+info: Fri Jan 17 22:17:14 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:19 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:19 2020] Start random injection
+info: Fri Jan 17 22:17:19 2020] Start generation number 8
+info: Fri Jan 17 22:17:19 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:20 2020] Best characters placement fitness value: 1407904.2
+info: Fri Jan 17 22:17:20 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:24 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:24 2020] Start random injection
+info: Fri Jan 17 22:17:24 2020] Start generation number 9
+info: Fri Jan 17 22:17:24 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:25 2020] Best characters placement fitness value: 1405444.33
+info: Fri Jan 17 22:17:25 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:30 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:30 2020] Start random injection
+info: Fri Jan 17 22:17:30 2020] Start generation number 10
+info: Fri Jan 17 22:17:30 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:31 2020] Best characters placement fitness value: 1405444.33
+info: Fri Jan 17 22:17:31 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:35 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:35 2020] Start random injection
+info: Fri Jan 17 22:17:35 2020] Start generation number 11
+info: Fri Jan 17 22:17:35 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:36 2020] Best characters placement fitness value: 1404542.19
+info: Fri Jan 17 22:17:36 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:41 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:41 2020] Start random injection
+info: Fri Jan 17 22:17:41 2020] Start generation number 12
+info: Fri Jan 17 22:17:41 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:42 2020] Best characters placement fitness value: 1400174.07
+info: Fri Jan 17 22:17:42 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:46 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:46 2020] Start random injection
+info: Fri Jan 17 22:17:46 2020] Start generation number 13
+info: Fri Jan 17 22:17:46 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:47 2020] Best characters placement fitness value: 1398449.15
+info: Fri Jan 17 22:17:47 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:52 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:52 2020] Start random injection
+info: Fri Jan 17 22:17:52 2020] Start generation number 14
+info: Fri Jan 17 22:17:52 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:53 2020] Best characters placement fitness value: 1398449.15
+info: Fri Jan 17 22:17:53 2020] Start natural selection and crossover
+info: Fri Jan 17 22:17:57 2020] Start mutating characters placements
+info: Fri Jan 17 22:17:57 2020] Start random injection
+info: Fri Jan 17 22:17:57 2020] Start generation number 15
+info: Fri Jan 17 22:17:57 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:17:58 2020] Best characters placement fitness value: 1398449.15
+info: Fri Jan 17 22:17:58 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:03 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:03 2020] Start random injection
+info: Fri Jan 17 22:18:03 2020] Start generation number 16
+info: Fri Jan 17 22:18:03 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:04 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:04 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:08 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:08 2020] Start random injection
+info: Fri Jan 17 22:18:08 2020] Start generation number 17
+info: Fri Jan 17 22:18:08 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:09 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:09 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:14 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:14 2020] Start random injection
+info: Fri Jan 17 22:18:14 2020] Start generation number 18
+info: Fri Jan 17 22:18:14 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:15 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:15 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:19 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:19 2020] Start random injection
+info: Fri Jan 17 22:18:19 2020] Start generation number 19
+info: Fri Jan 17 22:18:19 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:20 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:20 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:25 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:25 2020] Start random injection
+info: Fri Jan 17 22:18:25 2020] Start generation number 20
+info: Fri Jan 17 22:18:25 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:26 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:26 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:30 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:30 2020] Start random injection
+info: Fri Jan 17 22:18:30 2020] Start generation number 21
+info: Fri Jan 17 22:18:30 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:31 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:31 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:35 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:36 2020] Start random injection
+info: Fri Jan 17 22:18:36 2020] Start generation number 22
+info: Fri Jan 17 22:18:36 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:36 2020] Best characters placement fitness value: 1398343.04
+info: Fri Jan 17 22:18:36 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:41 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:41 2020] Start random injection
+info: Fri Jan 17 22:18:41 2020] Start generation number 23
+info: Fri Jan 17 22:18:41 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:42 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:18:42 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:46 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:47 2020] Start random injection
+info: Fri Jan 17 22:18:47 2020] Start generation number 24
+info: Fri Jan 17 22:18:47 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:47 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:18:47 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:52 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:52 2020] Start random injection
+info: Fri Jan 17 22:18:52 2020] Start generation number 25
+info: Fri Jan 17 22:18:52 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:53 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:18:53 2020] Start natural selection and crossover
+info: Fri Jan 17 22:18:57 2020] Start mutating characters placements
+info: Fri Jan 17 22:18:57 2020] Start random injection
+info: Fri Jan 17 22:18:58 2020] Start generation number 26
+info: Fri Jan 17 22:18:58 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:18:58 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:18:58 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:03 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:03 2020] Start random injection
+info: Fri Jan 17 22:19:03 2020] Start generation number 27
+info: Fri Jan 17 22:19:03 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:04 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:19:04 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:08 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:08 2020] Start random injection
+info: Fri Jan 17 22:19:09 2020] Start generation number 28
+info: Fri Jan 17 22:19:09 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:09 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:19:09 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:14 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:14 2020] Start random injection
+info: Fri Jan 17 22:19:14 2020] Start generation number 29
+info: Fri Jan 17 22:19:14 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:15 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:19:15 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:19 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:19 2020] Start random injection
+info: Fri Jan 17 22:19:20 2020] Start generation number 30
+info: Fri Jan 17 22:19:20 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:20 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:19:20 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:25 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:25 2020] Start random injection
+info: Fri Jan 17 22:19:25 2020] Start generation number 31
+info: Fri Jan 17 22:19:25 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:26 2020] Best characters placement fitness value: 1398169.41
+info: Fri Jan 17 22:19:26 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:30 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:30 2020] Start random injection
+info: Fri Jan 17 22:19:31 2020] Start generation number 32
+info: Fri Jan 17 22:19:31 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:31 2020] Best characters placement fitness value: 1397764.95
+info: Fri Jan 17 22:19:31 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:36 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:36 2020] Start random injection
+info: Fri Jan 17 22:19:36 2020] Start generation number 33
+info: Fri Jan 17 22:19:36 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:37 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:19:37 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:41 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:41 2020] Start random injection
+info: Fri Jan 17 22:19:42 2020] Start generation number 34
+info: Fri Jan 17 22:19:42 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:42 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:19:42 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:47 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:47 2020] Start random injection
+info: Fri Jan 17 22:19:47 2020] Start generation number 35
+info: Fri Jan 17 22:19:47 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:48 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:19:48 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:52 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:52 2020] Start random injection
+info: Fri Jan 17 22:19:53 2020] Start generation number 36
+info: Fri Jan 17 22:19:53 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:53 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:19:53 2020] Start natural selection and crossover
+info: Fri Jan 17 22:19:58 2020] Start mutating characters placements
+info: Fri Jan 17 22:19:58 2020] Start random injection
+info: Fri Jan 17 22:19:58 2020] Start generation number 37
+info: Fri Jan 17 22:19:58 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:19:59 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:19:59 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:03 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:03 2020] Start random injection
+info: Fri Jan 17 22:20:04 2020] Start generation number 38
+info: Fri Jan 17 22:20:04 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:04 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:04 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:09 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:09 2020] Start random injection
+info: Fri Jan 17 22:20:09 2020] Start generation number 39
+info: Fri Jan 17 22:20:09 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:10 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:10 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:14 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:14 2020] Start random injection
+info: Fri Jan 17 22:20:14 2020] Start generation number 40
+info: Fri Jan 17 22:20:14 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:15 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:15 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:20 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:20 2020] Start random injection
+info: Fri Jan 17 22:20:20 2020] Start generation number 41
+info: Fri Jan 17 22:20:20 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:21 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:21 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:25 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:25 2020] Start random injection
+info: Fri Jan 17 22:20:25 2020] Start generation number 42
+info: Fri Jan 17 22:20:25 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:26 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:26 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:31 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:31 2020] Start random injection
+info: Fri Jan 17 22:20:31 2020] Start generation number 43
+info: Fri Jan 17 22:20:31 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:32 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:32 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:36 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:36 2020] Start random injection
+info: Fri Jan 17 22:20:36 2020] Start generation number 44
+info: Fri Jan 17 22:20:36 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:37 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:37 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:42 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:42 2020] Start random injection
+info: Fri Jan 17 22:20:42 2020] Start generation number 45
+info: Fri Jan 17 22:20:42 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:43 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:43 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:47 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:47 2020] Start random injection
+info: Fri Jan 17 22:20:48 2020] Start generation number 46
+info: Fri Jan 17 22:20:48 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:48 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:48 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:53 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:53 2020] Start random injection
+info: Fri Jan 17 22:20:53 2020] Start generation number 47
+info: Fri Jan 17 22:20:53 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:54 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:54 2020] Start natural selection and crossover
+info: Fri Jan 17 22:20:58 2020] Start mutating characters placements
+info: Fri Jan 17 22:20:59 2020] Start random injection
+info: Fri Jan 17 22:20:59 2020] Start generation number 48
+info: Fri Jan 17 22:20:59 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:20:59 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:20:59 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:04 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:04 2020] Start random injection
+info: Fri Jan 17 22:21:04 2020] Start generation number 49
+info: Fri Jan 17 22:21:04 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:05 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:05 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:09 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:09 2020] Start random injection
+info: Fri Jan 17 22:21:10 2020] Start generation number 50
+info: Fri Jan 17 22:21:10 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:10 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:10 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:15 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:15 2020] Start random injection
+info: Fri Jan 17 22:21:15 2020] Start generation number 51
+info: Fri Jan 17 22:21:15 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:16 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:16 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:20 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:21 2020] Start random injection
+info: Fri Jan 17 22:21:21 2020] Start generation number 52
+info: Fri Jan 17 22:21:21 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:22 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:22 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:26 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:26 2020] Start random injection
+info: Fri Jan 17 22:21:26 2020] Start generation number 53
+info: Fri Jan 17 22:21:26 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:27 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:27 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:32 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:32 2020] Start random injection
+info: Fri Jan 17 22:21:32 2020] Start generation number 54
+info: Fri Jan 17 22:21:32 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:33 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:33 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:37 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:37 2020] Start random injection
+info: Fri Jan 17 22:21:37 2020] Start generation number 55
+info: Fri Jan 17 22:21:37 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:38 2020] Best characters placement fitness value: 1397602.46
+info: Fri Jan 17 22:21:38 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:43 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:43 2020] Start random injection
+info: Fri Jan 17 22:21:43 2020] Start generation number 56
+info: Fri Jan 17 22:21:43 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:44 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:21:44 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:49 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:49 2020] Start random injection
+info: Fri Jan 17 22:21:49 2020] Start generation number 57
+info: Fri Jan 17 22:21:49 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:50 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:21:50 2020] Start natural selection and crossover
+info: Fri Jan 17 22:21:54 2020] Start mutating characters placements
+info: Fri Jan 17 22:21:54 2020] Start random injection
+info: Fri Jan 17 22:21:54 2020] Start generation number 58
+info: Fri Jan 17 22:21:54 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:21:55 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:21:55 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:00 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:00 2020] Start random injection
+info: Fri Jan 17 22:22:00 2020] Start generation number 59
+info: Fri Jan 17 22:22:00 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:01 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:01 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:05 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:05 2020] Start random injection
+info: Fri Jan 17 22:22:05 2020] Start generation number 60
+info: Fri Jan 17 22:22:05 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:06 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:06 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:11 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:11 2020] Start random injection
+info: Fri Jan 17 22:22:11 2020] Start generation number 61
+info: Fri Jan 17 22:22:11 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:12 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:12 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:16 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:16 2020] Start random injection
+info: Fri Jan 17 22:22:17 2020] Start generation number 62
+info: Fri Jan 17 22:22:17 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:17 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:17 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:22 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:22 2020] Start random injection
+info: Fri Jan 17 22:22:22 2020] Start generation number 63
+info: Fri Jan 17 22:22:22 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:23 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:23 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:27 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:28 2020] Start random injection
+info: Fri Jan 17 22:22:28 2020] Start generation number 64
+info: Fri Jan 17 22:22:28 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:29 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:29 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:33 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:33 2020] Start random injection
+info: Fri Jan 17 22:22:34 2020] Start generation number 65
+info: Fri Jan 17 22:22:34 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:34 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:34 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:39 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:39 2020] Start random injection
+info: Fri Jan 17 22:22:39 2020] Start generation number 66
+info: Fri Jan 17 22:22:39 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:40 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:40 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:45 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:45 2020] Start random injection
+info: Fri Jan 17 22:22:45 2020] Start generation number 67
+info: Fri Jan 17 22:22:45 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:46 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:46 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:51 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:51 2020] Start random injection
+info: Fri Jan 17 22:22:51 2020] Start generation number 68
+info: Fri Jan 17 22:22:51 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:52 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:52 2020] Start natural selection and crossover
+info: Fri Jan 17 22:22:56 2020] Start mutating characters placements
+info: Fri Jan 17 22:22:56 2020] Start random injection
+info: Fri Jan 17 22:22:56 2020] Start generation number 69
+info: Fri Jan 17 22:22:56 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:22:57 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:22:57 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:02 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:02 2020] Start random injection
+info: Fri Jan 17 22:23:02 2020] Start generation number 70
+info: Fri Jan 17 22:23:02 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:03 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:03 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:08 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:08 2020] Start random injection
+info: Fri Jan 17 22:23:08 2020] Start generation number 71
+info: Fri Jan 17 22:23:08 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:09 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:09 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:13 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:14 2020] Start random injection
+info: Fri Jan 17 22:23:14 2020] Start generation number 72
+info: Fri Jan 17 22:23:14 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:15 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:15 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:19 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:19 2020] Start random injection
+info: Fri Jan 17 22:23:20 2020] Start generation number 73
+info: Fri Jan 17 22:23:20 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:20 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:20 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:25 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:25 2020] Start random injection
+info: Fri Jan 17 22:23:25 2020] Start generation number 74
+info: Fri Jan 17 22:23:25 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:26 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:26 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:31 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:31 2020] Start random injection
+info: Fri Jan 17 22:23:31 2020] Start generation number 75
+info: Fri Jan 17 22:23:31 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:32 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:32 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:36 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:36 2020] Start random injection
+info: Fri Jan 17 22:23:37 2020] Start generation number 76
+info: Fri Jan 17 22:23:37 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:37 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:37 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:42 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:42 2020] Start random injection
+info: Fri Jan 17 22:23:42 2020] Start generation number 77
+info: Fri Jan 17 22:23:42 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:43 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:43 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:48 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:48 2020] Start random injection
+info: Fri Jan 17 22:23:48 2020] Start generation number 78
+info: Fri Jan 17 22:23:48 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:49 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:49 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:53 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:53 2020] Start random injection
+info: Fri Jan 17 22:23:54 2020] Start generation number 79
+info: Fri Jan 17 22:23:54 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:23:54 2020] Best characters placement fitness value: 1396736.87
+info: Fri Jan 17 22:23:54 2020] Start natural selection and crossover
+info: Fri Jan 17 22:23:59 2020] Start mutating characters placements
+info: Fri Jan 17 22:23:59 2020] Start random injection
+info: Fri Jan 17 22:23:59 2020] Start generation number 80
+info: Fri Jan 17 22:23:59 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:00 2020] Best characters placement fitness value: 1396636.16
+info: Fri Jan 17 22:24:00 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:04 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:04 2020] Start random injection
+info: Fri Jan 17 22:24:05 2020] Start generation number 81
+info: Fri Jan 17 22:24:05 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:05 2020] Best characters placement fitness value: 1396636.16
+info: Fri Jan 17 22:24:05 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:10 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:10 2020] Start random injection
+info: Fri Jan 17 22:24:10 2020] Start generation number 82
+info: Fri Jan 17 22:24:10 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:11 2020] Best characters placement fitness value: 1396101.38
+info: Fri Jan 17 22:24:11 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:16 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:16 2020] Start random injection
+info: Fri Jan 17 22:24:16 2020] Start generation number 83
+info: Fri Jan 17 22:24:16 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:17 2020] Best characters placement fitness value: 1396101.38
+info: Fri Jan 17 22:24:17 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:21 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:21 2020] Start random injection
+info: Fri Jan 17 22:24:21 2020] Start generation number 84
+info: Fri Jan 17 22:24:21 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:22 2020] Best characters placement fitness value: 1396101.38
+info: Fri Jan 17 22:24:22 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:27 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:27 2020] Start random injection
+info: Fri Jan 17 22:24:27 2020] Start generation number 85
+info: Fri Jan 17 22:24:27 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:28 2020] Best characters placement fitness value: 1396101.38
+info: Fri Jan 17 22:24:28 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:32 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:32 2020] Start random injection
+info: Fri Jan 17 22:24:33 2020] Start generation number 86
+info: Fri Jan 17 22:24:33 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:33 2020] Best characters placement fitness value: 1396101.38
+info: Fri Jan 17 22:24:33 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:38 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:38 2020] Start random injection
+info: Fri Jan 17 22:24:38 2020] Start generation number 87
+info: Fri Jan 17 22:24:38 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:39 2020] Best characters placement fitness value: 1396101.38
+info: Fri Jan 17 22:24:39 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:43 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:43 2020] Start random injection
+info: Fri Jan 17 22:24:44 2020] Start generation number 88
+info: Fri Jan 17 22:24:44 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:45 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:24:45 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:49 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:49 2020] Start random injection
+info: Fri Jan 17 22:24:49 2020] Start generation number 89
+info: Fri Jan 17 22:24:49 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:50 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:24:50 2020] Start natural selection and crossover
+info: Fri Jan 17 22:24:55 2020] Start mutating characters placements
+info: Fri Jan 17 22:24:55 2020] Start random injection
+info: Fri Jan 17 22:24:55 2020] Start generation number 90
+info: Fri Jan 17 22:24:55 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:24:56 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:24:56 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:00 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:00 2020] Start random injection
+info: Fri Jan 17 22:25:00 2020] Start generation number 91
+info: Fri Jan 17 22:25:00 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:01 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:01 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:06 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:06 2020] Start random injection
+info: Fri Jan 17 22:25:06 2020] Start generation number 92
+info: Fri Jan 17 22:25:06 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:07 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:07 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:11 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:12 2020] Start random injection
+info: Fri Jan 17 22:25:12 2020] Start generation number 93
+info: Fri Jan 17 22:25:12 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:13 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:13 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:17 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:17 2020] Start random injection
+info: Fri Jan 17 22:25:17 2020] Start generation number 94
+info: Fri Jan 17 22:25:17 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:18 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:18 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:23 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:23 2020] Start random injection
+info: Fri Jan 17 22:25:23 2020] Start generation number 95
+info: Fri Jan 17 22:25:23 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:24 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:24 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:28 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:28 2020] Start random injection
+info: Fri Jan 17 22:25:29 2020] Start generation number 96
+info: Fri Jan 17 22:25:29 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:29 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:29 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:34 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:34 2020] Start random injection
+info: Fri Jan 17 22:25:34 2020] Start generation number 97
+info: Fri Jan 17 22:25:34 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:35 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:35 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:40 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:40 2020] Start random injection
+info: Fri Jan 17 22:25:40 2020] Start generation number 98
+info: Fri Jan 17 22:25:40 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:41 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:41 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:45 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:45 2020] Start random injection
+info: Fri Jan 17 22:25:46 2020] Start generation number 99
+info: Fri Jan 17 22:25:46 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:46 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:46 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:51 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:51 2020] Start random injection
+info: Fri Jan 17 22:25:51 2020] Start generation number 100
+info: Fri Jan 17 22:25:51 2020] Calculate fitness function for each characters placement
+info: Fri Jan 17 22:25:52 2020] Best characters placement fitness value: 1396064.36
+info: Fri Jan 17 22:25:52 2020] Start natural selection and crossover
+info: Fri Jan 17 22:25:57 2020] Start mutating characters placements
+info: Fri Jan 17 22:25:57 2020] Start random injection
+info: Fri Jan 17 22:25:57 2020] Time taken for genetic algorithm is 9.27 minutes
+info: Fri Jan 17 22:25:57 2020] Best characters placement fitness value on testing set: 1394663.75
+info: Fri Jan 17 22:25:57 2020] Visualize best characters placement found by genetic algorithm

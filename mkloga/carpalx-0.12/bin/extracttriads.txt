@@ -1,0 +1,184 @@
+#!/home/martink/bin/perl
+
+=pod
+
+=head1 NAME
+
+extracttriads - extract triads (or other letter groups) from input text
+
+=head1 SYNOPSIS
+
+  cat file.txt | extracttriads [-n GROUPSIZE] [-clean]
+
+=head1 DESCRIPTION
+
+Generates list of neighbouring characters. Whitespace is filtered out
+up-front and does not influence neighbourhood membership. 
+
+=head1 OPTIONS
+
+=over
+
+=item -n GROUPSIZE
+
+Set the group size of the letters using -n. By default, n=3 (triads).
+
+=item -clean
+
+Reports only those letter groups which are comprised entirely of word characters (a-z, 0-9, _).
+
+=back
+
+=head1 AUTHOR
+
+Martin Krzywinski
+
+=head1 CONTACT
+
+  Martin Krzywinski
+  Genome Sciences Centre
+  Vancouver BC Canada
+  www.bcgsc.ca
+  martink@bcgsc.ca
+
+=cut
+
+################################################################
+#
+# Copyright 2002-2008 Martin Krzywinski <martink@bcgsc.ca>
+#
+# This file is part of the Genome Sciences Centre Perl code base.
+#
+# This script is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This script is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this script; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+################################################################
+
+use strict;
+use Config::General;
+use Data::Dumper;
+use File::Basename;
+use FindBin;
+use Getopt::Long;
+use IO::File;
+use Math::VecStat qw(sum min max average);
+use Pod::Usage;
+use Storable;
+use Time::HiRes qw(gettimeofday tv_interval);
+use lib "$FindBin::RealBin";
+use lib "$FindBin::RealBin/../lib";
+use lib "$FindBin::RealBin/lib";
+use vars qw(%OPT %CONF);
+
+################################################################
+#
+# *** YOUR MODULE IMPORTS HERE
+#
+################################################################
+
+GetOptions(\%OPT,
+	   "n=i",
+	   "clean",
+	   "configfile=s","help","man","debug+");
+
+pod2usage() if $OPT{help};
+pod2usage(-verbose=>2) if $OPT{man};
+loadconfiguration($OPT{configfile});
+populateconfiguration(); # copy command line options to config hash
+validateconfiguration(); 
+if($CONF{debug} > 1) {
+  $Data::Dumper::Pad = "debug parameters";
+  $Data::Dumper::Indent = 1;
+  $Data::Dumper::Quotekeys = 0;
+  $Data::Dumper::Terse = 1;
+  print Dumper(\%CONF);
+}
+
+while(<>) {
+    chomp;
+    s/\s*//g;
+    my @letters = split("",$_);
+    for my $i (0..@letters-$CONF{n}) {
+      my $triad = join("",@letters[$i .. $i+$CONF{n}-1]);
+      next if $CONF{clean} && $triad =~ /\W/;
+      print $triad,"\n";
+    }
+}
+
+sub validateconfiguration {
+  $CONF{n} ||= 3;
+}
+
+################################################################
+#
+# *** DO NOT EDIT BELOW THIS LINE ***
+#
+################################################################
+
+sub populateconfiguration {
+  foreach my $key (keys %OPT) {
+    $CONF{$key} = $OPT{$key};
+  }
+
+  # any configuration fields of the form __XXX__ are parsed and replaced with eval(XXX). The configuration
+  # can therefore depend on itself.
+  #
+  # flag = 10
+  # note = __2*$CONF{flag}__ # would become 2*10 = 20
+
+  for my $key (keys %CONF) {
+    my $value = $CONF{$key};
+    while($value =~ /__([^_].+?)__/g) {
+      my $source = "__" . $1 . "__";
+      my $target = eval $1;
+      $value =~ s/\Q$source\E/$target/g;
+      #printinfo($source,$target,$value);
+    }
+    $CONF{$key} = $value;
+  }
+
+}
+
+sub loadconfiguration {
+  my $file = shift;
+  my ($scriptname) = fileparse($0);
+  if(-e $file && -r _) {
+    # great the file exists
+  } elsif (-e "/home/$ENV{LOGNAME}/.$scriptname.conf" && -r _) {
+    $file = "/home/$ENV{LOGNAME}/.$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/etc/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/etc/$scriptname.conf";
+  } elsif (-e "$FindBin::RealBin/../etc/$scriptname.conf" && -r _) {
+    $file = "$FindBin::RealBin/../etc/$scriptname.conf";
+  } else {
+    return undef;
+  }
+  $OPT{configfile} = $file;
+  my $conf = new Config::General(-ConfigFile=>$file,
+				 -AllowMultiOptions=>"yes",
+				 -LowerCaseNames=>1,
+				 -AutoTrue=>1);
+  %CONF = $conf->getall;
+}
+
+sub printdebug {
+  printinfo("debug",@_)  if $CONF{debug};
+}
+
+sub printinfo {
+  printf("%s\n",join(" ",@_));
+}
+

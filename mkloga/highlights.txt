@@ -1,0 +1,7 @@
+Scheduling plays an important role in many systems and industries.
+
+We consider scheduling problems aiming to minimize the total weighted tardiness.
+
+For the common due date case, we present a revised dynamic programming solution.
+
+For a more general online setting we offer a Reinforcement Learning algorithm.

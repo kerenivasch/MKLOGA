@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep "debug triad" | cut -d " " -f 3,31 | swapcol | sort | joinlines
